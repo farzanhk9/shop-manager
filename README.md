@@ -72,12 +72,12 @@ def daily_summary(data):
         print("📭 No sales today.")
         return
     total_income = sum(s["total"] for s in today_sales)
-    print(f"\n📅 Sales Summary for {today}")
+    print(f"\n📅📅 Sales Summary for {today}")
     print(f"💰 Total Income: ${total_income:.2f}")
     product_totals = {}
     for s in today_sales:
         product_totals[s["product"]] = product_totals.get(s["product"], 0) + s["quantity"]
-    print("\n🔥 Top Selling Products:")
+    print("\n🔥🔥 Top Selling Products:")
     for p, q in sorted(product_totals.items(), key=lambda x: x[1], reverse=True):
         print(f"- {p}: {q} sold")
 
